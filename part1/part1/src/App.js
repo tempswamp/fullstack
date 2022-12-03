@@ -9,7 +9,8 @@ const App = () => {
 
   return (
     <div>
-      <h1>{course}</h1>
+      <Header course={course} />
+      
       <p>
         {part1} {exercises1}
       </p>
@@ -22,6 +23,18 @@ const App = () => {
       <p>Number of exercises {exercises1 + exercises2 + exercises3}</p>
     </div>
   )
+}
+
+const Header = (input) => {
+  return (<h1>{input.course}</h1>)
+}
+
+const Content = (input) => {
+  return (<p>input.part1</p>)
+}
+
+const Total = (input) => {
+
 }
 
 export default App;
