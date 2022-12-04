@@ -29,10 +29,14 @@ const App = () => {
 
   return (
     <div>
+      <h1>Anecdote of the day</h1>
       {anecdotes[selected]} <br></br>
       ^has {votes[voteIndex]} votes<br></br>
       <Button handleClick={handleVote} input="Vote this anecdote" />
       <Button handleClick={handleAnecdote} input="Next" />
+      <h1>Anecdote with most votes</h1>
+      {anecdotes[votes.indexOf(Math.max(...votes))]}<br></br>
+      has {Math.max(...votes)} votes
     </div>
   )
 }
@@ -40,7 +44,5 @@ const App = () => {
 const Button = ({ handleClick, input }) => (
   <button onClick={handleClick}>{input}</button>
 )
-
-
 
 export default App
