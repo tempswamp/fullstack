@@ -7,18 +7,21 @@ const Stats = ({ good, neutral, bad }) => {
     return (<div>No feedback was given!</div>)
   }
   return(
-    <div><StatsLine input="Good" value={good}/>
+    <table>
+      <tbody><StatsLine input="Good" value={good}/>
         <StatsLine input="Neutral" value={neutral}/>
         <StatsLine input="Bad" value={bad}/>
         <StatsLine input="All" value={good + neutral + bad} />
         <StatsLine input="Average" value={(good - bad)/all} />
         <StatsLine input="Positive" value={(good / all)*100 + " %"} />
-        </div>
+        </tbody>
+        </table>
   )
 }
 
 const StatsLine = ({ input, value}) => (
-  <div>{input}: {value}</div>
+  <tr><td>{input}: </td>
+      <td>{value}</td></tr>
 )
 
 const Button = ({ handleClick, input }) => (
