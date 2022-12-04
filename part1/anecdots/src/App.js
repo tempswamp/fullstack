@@ -33,7 +33,6 @@ const App = () => {
       ^has {votes[voteIndex]} votes<br></br>
       <Button handleClick={handleVote} input="Vote this anecdote" />
       <Button handleClick={handleAnecdote} input="Next" />
-      
     </div>
   )
 }
