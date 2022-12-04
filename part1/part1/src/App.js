@@ -19,6 +19,7 @@ const App = () => {
       <Content part={part1.name} exercise={part1.exercises}/>
       <Content part={part2.name} exercise={part2.exercises}/>
       <Content part={part3.name} exercise={part3.exercises}/>
+      <Total exercise1={part1.exercises} exercise2={part2.exercises} exercise3={part3.exercises}/>
     </div>
   )
 }
@@ -36,7 +37,7 @@ const Part = (input) => {
 }
 
 const Total = (input) => {
-  return (<div>Number of exercises:  {input.exercise1 + input.exercises2 + input.exercises3}</div>)
+  return (<div>Number of exercises: {input.exercise1 + input.exercise2 + input.exercise3}</div>)
 }
 
 export default App;
